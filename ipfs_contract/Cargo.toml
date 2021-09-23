@@ -11,3 +11,4 @@ ipfs-api = { version = "0.12.0", features = ["with-actix"], default-features = f
 ipfs-api-backend-actix = "0.2"
 actix = "0.11.1"
 actix-rt = "2.1.0"
+storage = { path = "src/storage"}

@@ -1,5 +1,6 @@
 use ipfs_api::{IpfsApi, IpfsClient};
 use std::fs::File;
+use storage as store;
 
 #[actix_rt::main]
 async fn main() {
@@ -11,5 +12,5 @@ async fn main() {
         Ok(res) => cid = res.hash.to_string(),
         Err(e) => eprintln!("error adding file: {}", e),
     }
-    println!("{}", cid);
+    store::new(cid.to_string());
 }
